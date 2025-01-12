@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ContentController {
 
-    @GetMapping("/login")
+    @GetMapping("/req/login")
     public String login(Model model) {
         // logika tambahan jika diperlukan
         return "login"; // Pastikan ini mengarah ke file view yang benar, misalnya login.html
@@ -16,5 +16,10 @@ public class ContentController {
     @GetMapping("req/signup")
     public String signup() {
         return "signup";
+    }
+
+    @GetMapping("/index")
+    public String index() {
+        return "index";
     }
 }
